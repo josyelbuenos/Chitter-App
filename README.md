@@ -9,9 +9,9 @@
 
 <div align="center">
   <!-- Badges -->
-  <img src="https://img.shields.io/github/stars/josyel/chitter?style=for-the-badge&logo=github&color=D946EF&logoColor=fff" alt="Stars" />
-  <img src="https://img.shields.io/github/forks/josyel/chitter?style=for-the-badge&logo=github&color=8B5CF6&logoColor=fff" alt="Forks" />
-  <img src="https://img.shields.io/github/license/josyel/chitter?style=for-the-badge&color=22C55E&logoColor=fff" alt="License" />
+  <img src="https://img.shields.io/github/stars/josyel/Chitter-App?style=for-the-badge&logo=github&color=D946EF&logoColor=fff" alt="Stars" />
+  <img src="https://img.shields.io/github/forks/josyel/Chitter-App?style=for-the-badge&logo=github&color=8B5CF6&logoColor=fff" alt="Forks" />
+  <img src="https://img.shields.io/github/license/josyel/Chitter-App?style=for-the-badge&color=22C55E&logoColor=fff" alt="License" />
 </div>
 
 <p align="center">
