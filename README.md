@@ -25,6 +25,8 @@
 ![Pré-visualização do Chitter](/docs/captura.png)
 <p align="center" style="font-size: 0.8rem; color: #888;"><i>Interface principal do Chitter em modo escuro.</i></p>
 
+Demo; https://chitter-web.vercel.app/dashboard
+
 ## Sobre o Projeto
 
 **Chitter** é uma aplicação de chat em tempo real com uma abordagem moderna e focada em privacidade. Inspirado em uma estética cyberpunk, o projeto oferece uma plataforma onde os usuários podem conversar anonimamente, identificados apenas por um ID numérico único gerado no momento do cadastro.
