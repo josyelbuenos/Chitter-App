@@ -1,0 +1,42 @@
+
+{
+  "rules": {
+    "users": {
+      "$uid": {
+        ".read": "auth != null",
+        ".write": "auth != null && auth.uid === $uid",
+        "username": { ".validate": "!data.exists() || data.val() === newData.val()" },
+        "number": { ".validate": "!data.exists() || data.val() === newData.val()" },
+        "unreadCounts": {
+          "$chatId": {
+            ".write": "auth != null && ((root.child('users').child(auth.uid).child('number').val() != null && $chatId.contains(root.child('users').child(auth.uid).child('number').val())) || (root.child('groups').child($chatId).child('members').child(root.child('users').child(auth.uid).child('number').val()).exists()))"
+          }
+        },
+        "groups": {
+          "$groupId": {
+             ".write": "auth != null && root.child('groups').child($groupId).child('members').child(root.child('users').child($uid).child('number').val()).exists() && (auth.uid === $uid || root.child('groups').child($groupId).child('createdBy').val() === auth.uid)",
+             ".validate": "newData.val() === true || newData.val() === null"
+          }
+        }
+      }
+    },
+    "numbers": {
+      "$number": {
+         ".read": "auth != null",
+        ".write": "auth != null && !data.exists() && newData.child('uid').val() === auth.uid"
+      }
+    },
+    "groups": {
+      "$groupId": {
+        ".read": "auth != null && data.child('members').child(root.child('users').child(auth.uid).child('number').val()).exists()",
+        ".write": "auth != null && ((!data.exists() && newData.child('members').child(root.child('users').child(auth.uid).child('number').val()).exists()) || (data.exists() && data.child('members').child(root.child('users').child(auth.uid).child('number').val()).exists()))"
+      }
+    },
+    "chats": {
+      "$chatId": {
+        ".read": "auth != null && ((root.child('users').child(auth.uid).child('number').val() != null && $chatId.contains(root.child('users').child(auth.uid).child('number').val())) || (root.child('groups').child($chatId).child('members').child(root.child('users').child(auth.uid).child('number').val()).exists()))",
+        ".write": "auth != null && ((root.child('users').child(auth.uid).child('number').val() != null && $chatId.contains(root.child('users').child(auth.uid).child('number').val())) || (root.child('groups').child($chatId).child('members').child(root.child('users').child(auth.uid).child('number').val()).exists()))"
+      }
+    }
+  }
+}
