@@ -63,11 +63,11 @@ Você precisará do [Node.js](https://nodejs.org/) (versão 18 ou superior) e do
 
 1.  Clone o repositório:
     ```sh
-    git clone https://github.com/josyel/chitter.git
+    git clone https://github.com/josyelbuenos/Chitter-App.git
     ```
 2.  Navegue até o diretório do projeto:
     ```sh
-    cd chitter
+    cd Chitter-App
     ```
 3.  Instale as dependências:
     ```sh
